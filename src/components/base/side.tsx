@@ -40,14 +40,14 @@ export default function Side() {
       </div>
 
       <div className="w-full text-center">
-        <h2 className="text-3xl font-pixel font-bold bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
+        <h2 className="text-3xl font-pixel font-bold bg-linear-to-r from-accent to-white bg-clip-text text-transparent">
           ~@mwyeow.shig.gay~
         </h2>
       </div>
 
       <Clock />
 
-      <div className="w-full h-px bg-accent/20" />
+      <div className="w-full h-px bg-white/10" />
 
       <div className="w-full flex flex-col gap-3">
         <Button

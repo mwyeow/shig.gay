@@ -1,4 +1,5 @@
 import Side from "@/components/base/side";
+import Footer from "@/components/base/footer";
 
 export default function Home() {
   return (
@@ -7,9 +8,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-full h-80 lg:h-100 bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/banner.webp')" }}
       />
-
       <div className="absolute top-0 left-0 w-full h-80 lg:h-100 bg-linear-to-b from-background/40 via-background/70  to-background z-1" />
-
       <main className="relative z-10 min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 p-8 pt-10 lg:pt-14">
         <Side />
 
@@ -37,13 +36,14 @@ export default function Home() {
               That said, creativity doesn&apos;t always come without its
               challenges for me, i&apos;m notoriously indecisive, and it
               definitely shows sometimes. I can spend ages choosing between two
-              ideas, only to come up with a third one halfway through. It's a
+              ideas, only to come up with a third one halfway through. It&apos;s a
               bit chaotic, but it&apos;s all part of the fun, and I
               wouldn&apos;t have it any other way.
             </p>
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
