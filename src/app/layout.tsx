@@ -2,21 +2,28 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#5aa8eb",
+  themeColor: "#e74c62",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mwyeow.shig.gay"),
   title: "@mwyeow",
   description:
-    "A programmer based in the UK who loves turning random sparks of inspiration into creative little projects.",
+    "An indecisive pro'grammer making random things on the internet.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "@mwyeow",
     description:
-      "A programmer based in the UK who loves turning random sparks of inspiration into creative little projects.",
+      "An indecisive pro'grammer making random things on the internet.",
+    images: ["/avatar.webp"],
+  },
+
+  twitter: { // ew, shitwitter.
+    card: "summary",
+    title: "@mwyeow",
+    description: "An indecisive pro'grammer making random things on the internet.",
     images: ["/avatar.webp"],
   },
 };
