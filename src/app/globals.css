@@ -2,8 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-    --color-accent: #d85368;
-    --color-background: #000;
+    --color-accent: #d2405c;
+    --color-background: #0a0306;
+    --color-secondary: #261f20;
     --color-text: #fff;
     --color-subtext: #5b5b5b;
     --font-pixel: "Fredoka", sans-serif;

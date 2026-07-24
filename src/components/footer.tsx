@@ -3,12 +3,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-10">
+    <footer className="relative w-full py-10 mt-auto">
       <div className="pl-8 lg:pl-111 pr-8 lg:pr-16 flex flex-col gap-4">
-        <div className="w-full h-px bg-white/10" />
-
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-md overflow-hidden shrink-0">
+          <div className="w-7 h-7 rounded-full overflow-hidden shrink-0">
             <Image
               src="/avatar.webp"
               alt=""
@@ -21,7 +19,6 @@ export default function Footer() {
             angel@shig.gay
           </h2>
         </div>
-
         <div>
           <p className="text-subtext text-base">© Copyright shig.gay group.</p>
           <p className="text-subtext text-base mt-1">
@@ -30,7 +27,7 @@ export default function Footer() {
               href="https://www.pixiv.net/en/users/2509595"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
+              className="text-accent hover:opacity-80 transition-opacity"
             >
               Source
             </Link>

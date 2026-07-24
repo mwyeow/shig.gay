@@ -14,12 +14,11 @@ export default function Button({
   variant = "primary",
 }: Props) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2.5 font-pixel font-semibold px-6 py-3 rounded-2xl transition-colors duration-200 outline-none cursor-pointer";
+    "inline-flex items-center justify-center gap-2.5 font-pixel font-semibold px-6 py-3 rounded-xl transition-all duration-200 outline-none cursor-pointer active:scale-98";
   const innerShadow = "shadow-[inset_0_-4px_0px_0px_rgba(0,0,0,0.4)]";
-
   const variants = {
     primary: `bg-accent text-background hover:bg-accent/90 ${innerShadow}`,
-    secondary: `bg-white/10 text-text border border-white/10 hover:bg-white/20 ${innerShadow}`,
+    secondary: `bg-secondary text-text hover:bg-secondary/90 ${innerShadow}`,
   };
 
   const finalStyles = `${baseStyles} ${variants[variant]}`;
