@@ -102,7 +102,7 @@ export default function Side() {
       <div className="w-full flex flex-col gap-3">
         <Button
           icon={FaDiscord}
-          href="https://discord.gg/oopsy"
+          href="https://discord.gg/programmer"
           text="Discord"
           variant="primary"
         />
