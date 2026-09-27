@@ -2,64 +2,79 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#d2405c",
+  themeColor: "#b62b4a",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mwyeow.shig.gay"),
   title: "@mwyeow",
   description:
-    "An indecisive pro'grammer making random things on the internet.",
+    "An indecisive pro'grammer developing silly things for the internet.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "@mwyeow",
     description:
-      "An indecisive pro'grammer making random things on the internet.",
+      "An indecisive pro'grammer developing silly things for the internet.",
     images: ["/avatar.webp"],
   },
-  twitter: { // ew, shitwitter.
+  twitter: {
     card: "summary",
     title: "@mwyeow",
-    description: "An indecisive pro'grammer making random things on the internet.",
+    description:
+      "An indecisive pro'grammer developing silly things for the internet.",
     images: ["/avatar.webp"],
   },
 };
 
-function Noise() {
-  return (
-    <div className="absolute inset-0 w-full h-full min-h-screen -z-40 pointer-events-none flex flex-col overflow-hidden">
-      {[...Array(10)].map((_, i) => (
-        <svg
-          key={i}
-          className="w-screen h-screen saturate-0 shrink-0"
-          viewBox="0 0 142 158"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <filter id={`noiseFilter-${i}`}>
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="9"
-              numOctaves="1"
-              stitchTiles="stitch"
-              result="turbulence"
-            />
-            <feComponentTransfer>
-              <feFuncR type="table" tableValues="-1 0.2" />
-              <feFuncG type="table" tableValues="-1 0.2" />
-              <feFuncB type="table" tableValues="-1 0.2" />
-            </feComponentTransfer>
-          </filter>
-          <rect
-            className="w-screen h-screen"
-            filter={`url(#noiseFilter-${i})`}
-          />
-        </svg>
-      ))}
-    </div>
-  );
-}
+const cv2 = {
+  component: {
+    type: 17,
+    accent_color: 11938634,
+    components: [
+      {
+        type: 9,
+        components: [
+          {
+            type: 10,
+            content:
+              "# **[@mwyeow](https://mwyeow.shig.gay)**\nAn indecisive pro'grammer developing silly things for the internet.",
+          },
+        ],
+        accessory: {
+          type: 11,
+          media: {
+            url: "https://mwyeow.shig.gay/avatar.webp",
+          },
+        },
+      },
+      {
+        type: 1,
+        components: [
+          {
+            type: 2,
+            style: 5,
+            url: "https://mwyeow.shig.gay/projects",
+            label: "Projects",
+          },
+          {
+            type: 2,
+            style: 5,
+            url: "https://wamoone.com",
+            label: "Wamoone",
+          },
+          {
+            type: 2,
+            style: 5,
+            url: "https://discord.gg/Bjgx9gaaHG",
+            label: "Community",
+          },
+        ],
+      },
+    ],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -68,10 +83,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Noise />
-        {children}
-      </body>
+      <head>
+        <script
+          id="discord:component-embed"
+          type="application/json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(cv2),
+          }}
+        />
+      </head>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
