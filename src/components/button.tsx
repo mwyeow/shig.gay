@@ -5,6 +5,7 @@ interface Props {
   href?: string;
   text: string;
   variant?: "primary" | "secondary";
+  className?: string;
 }
 
 export default function Button({
@@ -12,16 +13,18 @@ export default function Button({
   href,
   text,
   variant = "primary",
+  className = "",
 }: Props) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2.5 font-pixel font-semibold px-6 py-3 rounded-xl transition-all duration-200 outline-none cursor-pointer active:scale-98";
-  const innerShadow = "shadow-[inset_0_-4px_0px_0px_rgba(0,0,0,0.4)]";
+    "inline-flex items-center justify-center gap-2 font-pixel font-semibold px-4 py-2 rounded-lg transition-all duration-150 outline-none cursor-pointer active:scale-98";
+
   const variants = {
-    primary: `bg-accent text-background hover:bg-accent/90 ${innerShadow}`,
-    secondary: `bg-secondary text-text hover:bg-secondary/90 ${innerShadow}`,
+    primary: "bg-accent text-background hover:bg-accent/90",
+    secondary:
+      "bg-white/10 text-white hover:bg-white/15 border border-white/10",
   };
 
-  const finalStyles = `${baseStyles} ${variants[variant]}`;
+  const finalStyles = `${baseStyles} ${variants[variant]} ${className}`;
 
   if (href) {
     return (
@@ -31,16 +34,16 @@ export default function Button({
         rel="noopener noreferrer"
         className={finalStyles}
       >
-        <Icon className="text-xl" />
-        {text}
+        <Icon className="text-lg shrink-0" />
+        <span>{text}</span>
       </a>
     );
   }
 
   return (
     <button className={finalStyles}>
-      <Icon className="text-xl" />
-      {text}
+      <Icon className="text-lg shrink-0" />
+      <span>{text}</span>
     </button>
   );
 }

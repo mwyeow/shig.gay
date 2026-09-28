@@ -12,7 +12,7 @@ export default function Embedded({ data }: EmbeddedProps) {
       target="_blank"
       rel="noopener noreferrer"
       style={{ borderLeftColor: data.color }}
-      className="group inline-flex flex-col w-full mb-3.5 break-inside-avoid bg-black/40 hover:bg-black/60 transition-colors rounded-lg border-l-[4px] border border-white/10 p-3 gap-2.5 shadow-sm overflow-hidden"
+      className="group inline-flex flex-col w-full mb-3.5 break-inside-avoid bg-black/40 hover:bg-black/60 transition-colors rounded-lg border-l-4 border border-white/10 p-3 gap-2.5 shadow-sm overflow-hidden"
     >
       <div className="flex gap-2.5 items-start justify-between">
         <div className="flex flex-col gap-1 min-w-0 flex-1">

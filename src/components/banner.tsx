@@ -4,11 +4,16 @@ import Link from "next/link";
 interface BannerProps {
   buttonHref?: string;
   buttonLabel?: string;
+  className?: string;
 }
 
-export default function Banner({ buttonHref, buttonLabel }: BannerProps) {
+export default function Banner({
+  buttonHref,
+  buttonLabel,
+  className = "",
+}: BannerProps) {
   return (
-    <div className="relative mb-6">
+    <div className={`relative mb-6 w-full ${className}`}>
       <div
         className="absolute -inset-1 bg-cover bg-center blur-xl opacity-40 scale-110 rounded-2xl"
         style={{ backgroundImage: "url('/banner.webp')" }}
@@ -18,6 +23,7 @@ export default function Banner({ buttonHref, buttonLabel }: BannerProps) {
           src="/banner.webp"
           alt="Banner"
           fill
+          sizes="(max-width: 1024px) 100vw, 672px"
           className="object-cover object-center"
           priority
         />

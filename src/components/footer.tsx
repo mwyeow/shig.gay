@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-10 mt-auto">
-      <div className="pl-8 lg:pl-111 pr-8 lg:pr-16 flex flex-col gap-4">
+    <footer className="relative w-full pt-16 pb-10 mt-auto z-10">
+      <div className="w-full flex flex-col gap-4">
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-full overflow-hidden shrink-0">
             <Image
