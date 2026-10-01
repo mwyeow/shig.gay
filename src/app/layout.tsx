@@ -5,7 +5,7 @@ import Side from "@/components/side";
 import Footer from "@/components/footer";
 
 export const viewport: Viewport = {
-  themeColor: "#b62b4a",
+  themeColor: "#accf77",
 };
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const cv2 = {
   component: {
     type: 17,
-    accent_color: 11938634,
+    accent_color: 11325303,
     components: [
       {
         type: 9,
