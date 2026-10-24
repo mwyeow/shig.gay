@@ -15,7 +15,7 @@ export default function Footer() {
               className="w-full h-full object-cover"
             />
           </div>
-          <h2 className="text-lg font-pixel font-bold bg-linear-to-r from-accent to-white bg-clip-text text-transparent whitespace-nowrap">
+          <h2 className="text-lg font-pixel font-bold bg-linear-to-r from-accent to-accent-secondary bg-clip-text text-transparent whitespace-nowrap">
             angel@shig.gay
           </h2>
         </div>

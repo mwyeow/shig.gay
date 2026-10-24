@@ -70,7 +70,7 @@ export default function Side() {
 
             <div className="absolute w-[120%] h-[120%] top-[-10%] left-[-10%] pointer-events-none z-10 overflow-visible">
               <Image
-                src="/overlay.gif"
+                src="/overlay.png"
                 alt=""
                 fill
                 sizes="(max-width: 640px) 96px, (max-width: 1024px) 115px, 345px"
