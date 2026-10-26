@@ -1,15 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export interface BannerButton {
+  href: string;
+  label: string;
+}
+
 interface BannerProps {
-  buttonHref?: string;
-  buttonLabel?: string;
+  buttons?: BannerButton[];
+  showHome?: boolean;
   className?: string;
 }
 
 export default function Banner({
-  buttonHref,
-  buttonLabel,
+  buttons = [],
+  showHome = false,
   className = "",
 }: BannerProps) {
   return (
@@ -28,14 +33,32 @@ export default function Banner({
           priority
         />
 
-        {buttonHref && buttonLabel && (
-          <Link
-            href={buttonHref}
-            className="absolute top-3 right-3 z-20 px-3 py-1.5 text-xs text-white bg-black hover:bg-black/80 rounded-md transition-all font-pixel"
-          >
-            {buttonLabel}
-          </Link>
-        )}
+        <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
+          {showHome && (
+            <Link
+              href="/"
+              className="w-7 h-7 rounded-full overflow-hidden shrink-0 border border-white/20 hover:border-accent bg-black/50"
+              title="Home"
+            >
+              <Image
+                src="/avatar.webp"
+                alt="Home"
+                width={28}
+                height={28}
+                className="w-full h-full object-cover"
+              />
+            </Link>
+          )}
+          {buttons.map((btn) => (
+            <Link
+              key={btn.href}
+              href={btn.href}
+              className="px-3 py-1.5 text-xs text-white bg-black hover:bg-black/80 rounded-md font-pixel"
+            >
+              {btn.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
