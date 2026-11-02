@@ -101,10 +101,17 @@ export default function Side() {
         />
         <Button
           icon={FaDiscord}
-          href="https://discord.gg/Bjgx9gaaHG"
-          text="Discord"
+          href="https://discord.gg/NNvt8tPKV7"
+          text="Community"
           variant="secondary"
-          className="w-full text-xs py-2"
+          className="w-full text-xs py-2 bg-accent/30!"
+        />
+        <Button
+          icon={FaDiscord}
+          href="https://discord.gg/Bjgx9gaaHG"
+          text="Moonebase"
+          variant="secondary"
+          className="w-full text-xs py-2 bg-accent-secondary/30!"
         />
       </div>
 
@@ -125,12 +132,12 @@ export default function Side() {
           <HiOutlineLink className="w-4.5 h-4.5 shrink-0 text-white/70" />
           <div className="flex flex-wrap items-center justify-start gap-x-2 gap-y-1">
             <a
-              href="https://shig.gay"
+              href="https://mwyeow.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
             >
-              shig.gay
+              mwyeow.dev
             </a>
             <span>•</span>
             <a
@@ -140,6 +147,15 @@ export default function Side() {
               className="hover:text-accent transition-colors"
             >
               wamoone.com
+            </a>
+            <span>•</span>
+            <a
+              href="https://shig.gay"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              shig.gay
             </a>
           </div>
         </div>
@@ -151,7 +167,7 @@ export default function Side() {
               href="mailto:angel@shig.gay"
               className="hover:text-accent transition-colors"
             >
-              angel@shig.gay
+              angel@mwyeow.dev
             </a>
             <span>•</span>
             <a

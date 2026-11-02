@@ -16,22 +16,11 @@ export default function Footer() {
             />
           </div>
           <h2 className="text-lg font-pixel font-bold bg-linear-to-r from-accent to-accent-secondary bg-clip-text text-transparent whitespace-nowrap">
-            angel@shig.gay
+            angel@mwyeow.dev
           </h2>
         </div>
         <div>
-          <p className="text-subtext text-base">© Copyright shig.gay group.</p>
-          <p className="text-subtext text-base mt-1">
-            Kemomimi-chan (Shiggy) is not a creation by the shig.gay group.{" "}
-            <Link
-              href="https://www.pixiv.net/en/users/2509595"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:opacity-80 transition-opacity"
-            >
-              Source
-            </Link>
-          </p>
+          <p className="text-subtext text-base">© Copyright mwyeow.dev.</p>
         </div>
       </div>
     </footer>

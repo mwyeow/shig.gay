@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mwyeow.shig.gay"),
+  metadataBase: new URL("https://mwyeow.dev"),
   title: "@mwyeow ~ the silliest developer :3",
   description:
     "An indecisive pro'grammer developing silly things for the internet.",
@@ -42,13 +42,13 @@ const cv2 = {
           {
             type: 10,
             content:
-              "# **[@mwyeow](https://mwyeow.shig.gay)**\nAn indecisive pro'grammer developing silly things for the internet.",
+              "# **[@mwyeow](https://mwyeow.dev)**\nAn indecisive pro'grammer developing silly things for the internet.",
           },
         ],
         accessory: {
           type: 11,
           media: {
-            url: "https://mwyeow.shig.gay/avatar.webp",
+            url: "https://mwyeow.dev/avatar.webp",
           },
         },
       },
@@ -58,7 +58,7 @@ const cv2 = {
           {
             type: 2,
             style: 5,
-            url: "https://mwyeow.shig.gay/projects",
+            url: "https://mwyeow.dev/projects",
             label: "Projects",
           },
           {
@@ -70,7 +70,7 @@ const cv2 = {
           {
             type: 2,
             style: 5,
-            url: "https://discord.gg/Bjgx9gaaHG",
+            url: "https://discord.gg/NNvt8tPKV7",
             label: "Community",
           },
         ],
